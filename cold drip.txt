@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLD DRIP | Ropa de Marca a Precios Reducidos</title>
+    <!-- Incluir Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Iconos Lucide (para RRSS) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        :root {
+            --color-primary: #00bcd4; /* Azul Claro/Cian, imitando el 'drip' */
+            --color-secondary: #fcd34d; /* Amarillo/Dorado para contraste */
+            --color-dark: #1f2937; /* Gris Oscuro */
+            --color-light: #f9fafb; /* Gris Muy Claro */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-light);
+            overflow-x: hidden;
+            /* Scroll-behavior smooth para que el anclaje sea suave */
+            scroll-behavior: smooth;
+        }
+        /* Estilo para el goteo/icicle en el hero */
+        .icicle-shadow {
+            text-shadow: 
+                -2px -2px 0 var(--color-dark),  
+                2px -2px 0 var(--color-dark),
+                -2px 2px 0 var(--color-dark),
+                2px 2px 0 var(--color-dark),
+                0 0 10px rgba(0, 0, 0, 0.5); 
+        }
+
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado (Sticky/Fixed) -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo/Nombre -->
+            <div class="text-3xl font-extrabold text-gray-900 flex items-center">
+                <span class="text-[var(--color-primary)] icicle-shadow">COLD DRIP</span>
+            </div>
+            <!-- Botón CTA en el Header (Visible en Desktop) -->
+            <!-- Enlace corregido para ir al formulario de contacto/suscripción -->
+            <a href="#contacto" class="hidden sm:block px-4 py-2 bg-[var(--color-primary)] text-white font-semibold rounded-lg shadow-md hover:bg-cyan-600 cta-button">
+                ¡EMPIEZA A COMPRAR!
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección 1: Hero -->
+        <section id="hero" class="relative bg-[var(--color-dark)] text-white pt-16 pb-24 sm:pt-24 sm:pb-32 overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 icicle-shadow">
+                    Viste a la Moda Sin Romper tu Hucha.
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    **COLD DRIP** es tu destino e-commerce para conseguir **ropa de marca joven, casual y provocadora a precios rebajados**. ¡El estilo que quieres, el precio que necesitas!
+                </p>
+                <!-- Botón CTA principal -->
+                <a href="#colecciones" class="inline-block px-10 py-4 bg-[var(--color-secondary)] text-[var(--color-dark)] text-lg font-bold rounded-xl shadow-2xl hover:bg-yellow-400 cta-button">
+                    Descubre el Drip Ahora
+                </a>
+            </div>
+            <!-- Imagen de fondo que simula el ambiente joven e informal -->
+            <div class="absolute inset-0 bg-cover bg-center opacity-30" 
+                style="background-image: url('https://placehold.co/1200x800/222222/ffffff?text=Fondo+urbano+casual');">
+            </div>
+        </section>
+
+        <!-- Sección 2: Propuesta de Valor / Problema Resuelto -->
+        <section id="valor" class="py-16 sm:py-24 bg-[var(--color-light)]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[var(--color-dark)]">
+                        ¿Por qué COLD DRIP es la Solución?
+                    </h2>
+                    <p class="mt-4 text-xl text-gray-600">
+                        Te dirigimos a ti: **gente joven (13-24 años)** que quiere estilo sin el precio oficial.
+                    </p>
+                </div>
+                
+                <!-- Cards de Problema/Solución -->
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Problema 1: Precio -->
+                    <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-[var(--color-secondary)]">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <!-- Icono de Lucide: Dollar Sign -->
+                            <i data-lucide="dollar-sign" class="text-4xl text-[var(--color-secondary)]"></i>
+                            <h3 class="text-xl font-bold text-[var(--color-dark)]">El Alto Costo</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            La ropa de marca es demasiado cara para el presupuesto promedio de un joven.
+                        </p>
+                        <p class="mt-3 font-semibold text-[var(--color-primary)]">
+                            **Nuestra Solución:** Acceso directo a prendas de calidad y con estilo a precios significativamente rebajados.
+                        </p>
+                    </div>
+
+                    <!-- Problema 2: Confianza -->
+                    <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-[var(--color-primary)]">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <!-- Icono de Lucide: Shield Check -->
+                            <i data-lucide="shield-check" class="text-4xl text-[var(--color-primary)]"></i>
+                            <h3 class="text-xl font-bold text-[var(--color-dark)]">Confianza y Origen</h3>
+                        </div>
+                        <p class="text-gray-700">
+                            Existe desconfianza en comprar directamente a proveedores no oficiales.
+                        </p>
+                        <p class="mt-3 font-semibold text-[var(--color-secondary)]">
+                            **Nuestra Solución:** Actuamos como tu intermediario de confianza. Nosotros compramos, validamos y te vendemos, garantizando la calidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Producto/Colecciones Curadas -->
+        <section id="colecciones" class="py-16 sm:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-12 text-[var(--color-dark)]">
+                    Explora Nuestro Drip Curado 🛍️
+                </h2>
+                <!-- Cuadrícula de Productos/Categorías (4x1 en móvil, 2x2 en tablet, 4x1 en desktop) -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                    
+                    <!-- NOTA IMPORTANTE: Todos los enlaces de categoría ahora apuntan a la misma sección (#colecciones) 
+                         para simular la acción de ir a una subsección de la tienda. -->
+
+                    <!-- Categoría 1: Sneakers -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                        <img src="https://placehold.co/600x600/1f2937/fcd34d?text=SNEAKERS" alt="Colección de Sneakers" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="font-bold text-lg text-[var(--color-dark)]">SNEAKERS</p>
+                            <a href="#colecciones" class="text-[var(--color-primary)] hover:underline text-sm">Ver Más</a>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 2: Hoodies & Sweatshirts -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                        <img src="https://placehold.co/600x600/1f2937/00bcd4?text=HOODIES" alt="Colección de Sudaderas" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="font-bold text-lg text-[var(--color-dark)]">HOODIES & SWTS</p>
+                            <a href="#colecciones" class="text-[var(--color-primary)] hover:underline text-sm">Ver Más</a>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 3: Leggings & Joggers -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                        <img src="https://placehold.co/600x600/1f2937/fcd34d?text=JOGGERS" alt="Colección de Leggings y Joggers" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="font-bold text-lg text-[var(--color-dark)]">LEGGINS & JOGGERS</p>
+                            <a href="#colecciones" class="text-[var(--color-primary)] hover:underline text-sm">Ver Más</a>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 4: Outerwear -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.03] transition duration-300">
+                        <img src="https://placehold.co/600x600/1f2937/00bcd4?text=OUTERWEAR" alt="Colección de Ropa Exterior" class="w-full h-32 sm:h-48 object-cover">
+                        <div class="p-4 text-center">
+                            <p class="font-bold text-lg text-[var(--color-dark)]">OUTERWEAR</p>
+                            <a href="#colecciones" class="text-[var(--color-primary)] hover:underline text-sm">Ver Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <!-- Enlace corregido para ir a la sección de colecciones, simulando la tienda principal -->
+                    <a href="#colecciones" class="inline-block px-8 py-3 bg-[var(--color-primary)] text-white font-bold rounded-xl shadow-lg hover:bg-cyan-600 cta-button">
+                        Ir a la Tienda Completa
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: Marketing / Evento Exclusivo (Ahora con video) -->
+        <section id="evento" class="py-16 sm:py-24 bg-[var(--color-dark)] text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[var(--color-secondary)] mb-4">
+                    ¡Lanzamiento Exclusivo! 🎬
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Mira el avance de nuestro primer **evento exclusivo en tienda** para el lanzamiento de un nuevo artículo de una marca famosa.
+                </p>
+                
+                <!-- Reproductor de Video -->
+                <div class="max-w-xl mx-auto rounded-xl overflow-hidden shadow-2xl mb-8 border-4 border-[var(--color-primary)]">
+                    <video controls muted autoplay loop playsinline class="w-full h-auto object-cover">
+                        <!-- Fuente del video subido -->
+                        <source src="PixVerse_V5_Image_Text_720P_El_objetivo_es_cre.mp4" type="video/mp4">
+                        Tu navegador no soporta el tag de video.
+                    </video>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-6">Sé el Primero en Enterarte del "DROP"</h3>
+                <!-- Formulario de Suscripción (simulado) -->
+                <form id="contacto" class="max-w-lg mx-auto bg-gray-800 p-6 rounded-xl shadow-2xl">
+                    <input type="email" placeholder="Introduce tu email para acceso anticipado" required
+                           class="w-full px-4 py-3 mb-4 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+                    <button type="submit" class="w-full px-4 py-3 bg-[var(--color-secondary)] text-[var(--color-dark)] font-bold rounded-lg shadow-md hover:bg-yellow-400 cta-button">
+                        ¡QUIERO MI INVITACIÓN VIP!
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sección 5: Footer / Redes Sociales y Equipo -->
+        <footer class="bg-gray-900 text-white py-10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                    
+                    <!-- Columna 1: Navegación Rápida -->
+                    <div>
+                        <h4 class="text-xl font-bold mb-4 text-[var(--color-primary)]">COLD DRIP</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <!-- Enlaces de navegación corregidos -->
+                            <li><a href="#hero" class="hover:text-white transition duration-200">Inicio</a></li>
+                            <li><a href="#colecciones" class="hover:text-white transition duration-200">Tienda</a></li>
+                            <li><a href="#valor" class="hover:text-white transition duration-200">Sobre Nosotros</a></li>
+                            <li><a href="#contacto" class="hover:text-white transition duration-200">Vende Tu Ropa (SELL YOUR GEAR)</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Columna 2: Equipo -->
+                    <div>
+                        <h4 class="text-xl font-bold mb-4 text-[var(--color-secondary)]">El Equipo</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li>Tomás García-Ramos Toribios</li>
+                            <li>Javier De La Calle López</li>
+                            <li>Anthony Joseph Cribas Pacheco</li>
+                            <li class="mt-2 text-sm text-gray-500">Impulsando el estilo joven.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 3: Redes Sociales / CTA Final -->
+                    <div>
+                        <h4 class="text-xl font-bold mb-4 text-[var(--color-primary)]">¡Síguenos!</h4>
+                        <div class="flex justify-center md:justify-start space-x-6">
+                            <!-- Los enlaces de redes sociales pueden dejarse en # ya que no hay destino real dentro de la landing page -->
+                            <a href="#" class="text-gray-400 hover:text-[var(--color-secondary)] transition duration-200"><i data-lucide="instagram"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-[var(--color-secondary)] transition duration-200"><i data-lucide="facebook"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-[var(--color-secondary)] transition duration-200"><i data-lucide="twitter"></i></a>
+                        </div>
+                        <p class="mt-6 text-sm text-gray-500">© 2025 COLD DRIP. Todos los derechos reservados.</p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Inicializar iconos Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>
